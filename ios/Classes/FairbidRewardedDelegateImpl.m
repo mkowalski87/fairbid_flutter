@@ -51,7 +51,7 @@ static NSString *const _AD_TYPE = @"rewarded";
 }
 
 - (void)rewardedDidFailToShow:(nonnull NSString *)placementId withError:(NSError *)error impressionData:(nonnull FYBImpressionData *)impressionData {
-    //    Called when an error arises when showing a rewarded ad from placement
+    NSLog(@"%@",error);
     [self sendEvent: @"showFailure" forPlacement: placementId withImpressionData:impressionData];
 }
 
